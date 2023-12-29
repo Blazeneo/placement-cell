@@ -1,16 +1,7 @@
-const fs = require('fs');
-const rfs = require('rotating-file-stream');
-const path = require('path');
 
-// Create a function to generate the rotating file stream
-const createAccessLogStream = () => {
-    const logDirectory = path.join(__dirname, '../production_logs');
-    fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
-    return rfs.createStream('access.log', {
-        interval: '1d',
-        path: logDirectory,
-    });
-};
+
+
+  
 
 const development = {
     name: 'development',
@@ -31,8 +22,8 @@ const production = {
     session_cookie_key: process.env.SESSION_COOKIE_KEY,
     port: process.env.PORT,
     morgan: {
-        mode: 'combined',
-        stream: createAccessLogStream(), // Use the rotating file stream for production
+        mode: 'common',
+      
     },
 };
 
