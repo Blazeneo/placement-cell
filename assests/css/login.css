@@ -1,0 +1,32 @@
+.login{
+    display:block ;
+
+    flex-direction:row ;
+    
+
+    margin-top: 50vh;
+    margin-left: 50vw;
+
+   
+
+
+}
+
+.login-container {
+    margin-top: 30vh;
+    margin-left: 40vw;
+    width: 300px; }
+  
+  .login-form {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+  }
+  input{
+    border-color: white;
+    border-radius: 5px;
+  }
+  .login-input{
+    width: 50%;
+  }

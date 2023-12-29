@@ -1,0 +1,68 @@
+
+<link rel="stylesheet" href="/static/css/home.css">
+
+<div>
+        <h1><%=user.name %></h1> 
+        <a href="/users/interview">Interviews</a>
+        <a href="/downloadCsv">DownloadCsv</a>
+      </div>
+        
+        <div>
+             
+                  <table class="table table-secondary">
+
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">batch</th>
+                            <th scope="col">name</th>
+                            <th scope="col">college</th>
+                           
+                            <th scope="col" >placement status</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <% if(data){%>
+                         
+                        <% for(let i=0; i<data.length; i++) { %>
+                              <tr name="<%= data[i].id %>">
+                                <th scope="row"><%= i + 1 %></th>
+                                <td><%= data[i].batch %></td>
+                                <td><%= data[i].name %></td>
+                                <td><%= data[i].college %></td>
+                                
+                                <td><%= data[i].status %></td>
+                                <td><a href="/users/removeStudent/<%= data[i].id %>" id="<%= data[i].id  %>" ><i class="fa-solid fa-trash"></i></a>
+
+                                </td>
+                                
+                              </tr>
+                            <% } %><% } %>
+              
+            
+      </table>
+              </div>
+
+              <div>
+                <h1>Add a new Student</h1>
+                  <form action="/users/createStudent" method="post">
+                        <input type="text" name="batch"  placeholder="Batch">
+                        <input type="text" name="name"  placeholder="Name">
+                        <input type="text" name="college"  placeholder="college">
+                        
+
+                        <input type="text" name="webDFinalScore"  placeholder="DSA">
+                        <input type="text" name="reactFinalScore"  placeholder="frontend">
+                        <input type="text" name="dsaFinalScore"  placeholder="backEnd">
+                        <input type="radio" name="status" id="placed" value="placed" >
+                        <label for="placed">placed</label>
+                        <input type="radio" name="status" id="not_placed" value="not_placed" >
+                        <label for="not_placed">not_placed</label>
+                        <input type="submit" >
+                  </form>
+              </div>
+ <script>
+       
+
+        console.log('hi');
+ </script>

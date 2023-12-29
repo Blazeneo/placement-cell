@@ -1,0 +1,26 @@
+h1 ,h3{
+
+    text-decoration: underline;
+
+}
+
+select{
+    width: 10vw;
+}
+
+#Sname{
+    width: 10vw;
+}
+button ,#submit{
+    padding: 10px 20px; 
+    font-size: 16px;   
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+  }
+
+  .click:active{
+    background-color: blueviolet;
+  }
+  
+ 

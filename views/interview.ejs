@@ -1,0 +1,49 @@
+
+<div>
+             
+    <table class="table table-secondary">
+
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Company</th>
+              <th scope="col">date</th>
+              
+              
+              <th></th>
+            </tr>
+          </thead>
+          <% if(data){%>
+           
+          <% for(let i=0; i<data.length; i++) { %>
+                <tr name="<%= data[i].id %>">
+                  <th scope="row"><%= i + 1 %></th>
+                  <td><a href="/users/comapany/<%= data[i].id %>"><%= data[i].companyName %></a></td>
+                  <td><%= data[i].date %></td>
+                  
+                  <td><a href="/users/removecompany/<%= data[i].id %>" id="<%= data[i].id  %>" ><i class="fa-solid fa-trash"></i></a>
+
+                  </td>
+                  
+                </tr>
+              <% } %><% } %>
+
+
+
+
+</table>
+</div>
+
+<div>
+    <form action="/users/createInterview" method="post">
+          <input type="text" name="companyName"  placeholder="companyName">
+          <input type="datetime-local" name="date"  placeholder="date">
+          
+          <input type="submit" >
+    </form>
+</div>
+<script>
+
+
+
+</script>

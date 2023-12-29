@@ -1,0 +1,64 @@
+body{
+    color: blue;
+    background-color: aqua;
+
+
+}
+
+
+a{
+
+    background-color: white;
+
+   
+    text-decoration: none;
+    padding: 2px ; 
+    margin-bottom: 50px;
+    font-size: 16px;   
+    border:2px solid ;
+    border-color: white;
+    border-radius: 5px; 
+    cursor: pointer;
+    
+}
+a:active{
+
+   background-color: aqua;
+}
+div {
+    padding: 2px ; 
+    margin-bottom: 5px;
+  }
+  label {
+    font-weight: bold;
+  }
+  
+  
+  input {
+    padding: 4px;
+    width: 30%;
+    box-sizing: border-box;
+    margin-top: 4px; 
+    background-color: white;
+
+   
+    text-decoration: none;
+   
+    font-size: 16px;   
+    border:2px solid ;
+    border-color: white;
+    border-radius: 5px; 
+  }
+  
+  input[type="submit"] {
+   
+    cursor: pointer;
+  }
+  input[type="submit"]:active{
+    background-color: blueviolet;
+  }
+
+  input[type="radio"]{
+    margin-left: 4%;
+    width: 1%;
+  }

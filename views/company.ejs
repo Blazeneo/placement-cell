@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="/static/css/company.css">
+
+<div>
+<a href="/users/interview">Interviews</a>
+
+  <h1>Company: <%=data.companyName %></h1>
+  
+  <table class="table table-secondary">
+
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Result</th>
+        
+        <th></th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+
+  <% if(data){%>
+           
+    <% for(let i=0; i<data.students.length; i++) { %>
+          <tr>
+            <th><%= i+1 %></th>
+            <td>
+              <%= data.students[i].name %>
+
+            </td>
+            <td>
+             <%= data.students[i].result %>
+
+            </td>
+            <td>
+
+
+
+              <form action="/users/company/update/<%= data._id %>/<%= i %>" method="post">
+
+                
+
+                <select name="result" value="" >
+    
+    
+    
+                  
+                  <option value="PASS">PASS</option>
+                  <option value="FAIL">FAIL</option>
+                  <option value="On Hold">On Hold</option>
+                  <option value="Didn’t Attempt">Didn’t Attempt</option>
+                </select>
+    
+                <button type="submit" class="click">update</button>
+               </form>
+
+            </td>
+            <td>
+              <form action="/users/company/removeStudent/<%= data._id %>" method="POST">
+                <input type="hidden" name="index" value="<%= i %>">
+                <button type="submit" class="click"> <i class="fa-solid fa-trash"></i></button>
+            </form>
+
+            </td>
+
+
+          </tr>  
+          
+        <% } %><% } %>
+
+
+
+
+</table>
+</div>
+
+<div>
+  <h3>Add student</h3>
+<form action="/users/addstudents" method="post">
+
+  <input type="hidden" value="<%= data.id %>" name="company">
+  <select class="form-select" id="Sname" aria-label="Default select example" name="name" required>
+    
+    
+    <% if(data){%>
+           
+      <% for(let i=0; i<student.length; i++) { %>
+        
+        <option value="<%= student[i]._id %>" ><%= student[i].name %></option>
+              
+              
+
+              
+          <% } %><% } %>
+  </select>
+    <input type="radio" name="status" id="PASS" value="PASS" required>
+    <label for="PASS">PASS</label>
+    <input type="radio" name="status" id="FAIL" value="FAIL" required>
+    <label for="FAIL">FAIL</label>
+    <input type="radio" name="status" id="On Hold" value="On Hold" required>
+    <label for="On Hold">On Hold</label>
+    <input type="radio" name="status" id="Didn’t Attempt" value="Didn’t Attempt" required>
+    <label for="Didn’t Attempt">Didn’t Attempt</label>
+    <input type="submit" id="submit" class="click" >
+</form>
+
+</div>
