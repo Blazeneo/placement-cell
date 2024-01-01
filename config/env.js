@@ -6,7 +6,7 @@
 const development = {
     name: 'development',
     asset_path: 'assets', // Corrected the spelling of 'assets'
-    db: 'placement_cell',
+    db: 'mongodb+srv://rajpruthviraj1999:evqMBdoxzjcFdboZ@placement-cell.ffrytmh.mongodb.net/?retryWrites=true&w=majority',
     session_cookie_key: 'warthog',
     port: 8000,
     morgan: {
