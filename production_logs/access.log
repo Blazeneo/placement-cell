@@ -15,3 +15,7 @@
 ::1 - - [Mon, 01 Jan 2024 05:41:08 GMT] "POST /create-session HTTP/1.1" 302 54 "http://localhost:8000/users/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 ::1 - - [Mon, 01 Jan 2024 05:41:08 GMT] "GET /home HTTP/1.1" 200 3250 "http://localhost:8000/users/sigin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 ::1 - - [Mon, 01 Jan 2024 05:41:08 GMT] "GET /static/css/home.css HTTP/1.1" 404 158 "http://localhost:8000/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+::1 - - [Mon, 01 Jan 2024 06:08:05 GMT] "GET / HTTP/1.1" 200 1606 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+::1 - - [Mon, 01 Jan 2024 06:08:07 GMT] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+::1 - - [Mon, 01 Jan 2024 06:08:10 GMT] "POST /create-session HTTP/1.1" 302 54 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+::1 - - [Mon, 01 Jan 2024 06:08:10 GMT] "GET /home HTTP/1.1" 200 3250 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"

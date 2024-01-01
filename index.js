@@ -66,7 +66,7 @@ app.use(
       maxAge: 1000 * 60 * 100,
     },
     store: new MongoStore({
-      mongoUrl:'mongodb://127.0.0.1:27017/placement_cell',
+      mongoUrl:env.db,
       mongooseConnection:db,
       autoRemoval:'disabled'
     },function(err){
